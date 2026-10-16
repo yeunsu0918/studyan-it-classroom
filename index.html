@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffbc00">
+  <title>알쓸 IT 잡 · 스터디언 강의실</title>
+  <link rel="stylesheet" href="styles.css?v=kb1">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#player-section">영상으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="?lesson=3" aria-label="KB손해보험 스터디언 강의실 처음으로">
+      <img class="brand-logo" src="assets/kb-logo.png" alt="KB손해보험">
+      <span class="brand-divider" aria-hidden="true"></span>
+      <strong>스터디언<span>강의실</span></strong>
+    </a>
+    <span class="header-note">함께 배우고, 다시 꺼내보는 IT</span>
+    <span class="preview-label"><span aria-hidden="true"></span>3강 공개</span>
+  </header>
+
+  <main>
+    <div class="collection-heading">
+      <div><p class="eyebrow">KB손해보험 IT본부 · 스터디언</p><h1>알쓸 <span class="title-highlight">IT</span> 잡</h1><p class="collection-description">AI 코딩부터 네트워크까지, 우리 IT를 이해하는 9개의 강의.</p></div>
+      <a class="mobile-curriculum-link" href="#curriculum">전체 9강 <span aria-hidden="true">↓</span></a>
+      <div class="collection-count"><strong>09</strong><span>개의 이야기<br>2강 — 10강</span></div>
+    </div>
+
+    <div class="classroom">
+      <section id="player-section" class="lesson-view" aria-labelledby="lesson-title" tabindex="-1">
+        <div class="player-shell">
+          <video id="video" controls playsinline preload="metadata" poster="assets/lesson-03.jpg" aria-label="3강 IT 프레임워크의 이해 강의 영상"></video>
+          <button id="big-play" class="big-play" type="button" aria-label="3강 영상 재생"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg></button>
+          <div id="unavailable" class="unavailable" hidden>
+            <span class="unavailable-number" id="unavailable-number" aria-hidden="true">04</span>
+            <p class="eyebrow">강의 영상 준비 중</p>
+            <h2 id="unavailable-title"></h2>
+            <p>현재 3강 영상이 공개되어 있어요.<br>이 강의 영상은 준비 중입니다.</p>
+            <button id="back-to-video" class="primary-button" type="button">공개된 3강 보기 <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+
+        <div class="lesson-toolbar">
+          <span id="lesson-state" class="lesson-state">3강 · 15분 02초</span>
+          <div class="toolbar-actions">
+            <label id="speed-control" class="speed-control">재생 속도<select id="speed" aria-label="영상 재생 속도"><option value="0.75">0.75배</option><option value="1" selected>1배</option><option value="1.25">1.25배</option><option value="1.5">1.5배</option><option value="2">2배</option></select></label>
+            <button id="share" class="text-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 13 4-4M8 16l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m4 0 2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(1 -1)"/></svg>강의 링크 복사</button>
+          </div>
+        </div>
+
+        <div class="lesson-heading">
+          <h2 id="lesson-title">IT 프레임워크의 이해</h2>
+          <p id="lesson-description">프레임워크의 본질부터 Java 생태계의 진화까지. 조회 요청 한 건을 따라가며 이해합니다.</p>
+        </div>
+        <div id="resume-notice" class="resume-notice" hidden><p>지난번 <strong id="resume-time"></strong>까지 보셨어요.</p><button id="resume" type="button">이어서 보기 <span aria-hidden="true">→</span></button></div>
+
+        <section id="chapter-section" class="chapter-section" aria-labelledby="chapter-title">
+          <div class="section-heading"><h3 id="chapter-title">궁금한 부분부터 보기 <span>14</span></h3><span>누르면 해당 장면으로 이동해요</span></div>
+          <ol id="chapters" class="chapters"></ol>
+        </section>
+
+        <div id="resource-row" class="resource-row"><div><strong>강의 자료도 함께 보세요</strong><p>이 영상의 바탕이 된 원본 PPT · 16쪽</p></div><a class="download-button" href="assets/lesson-03.pptx" download="알쓸IT잡_3강_IT_프레임워크의_이해.pptx">PPT 내려받기 <span aria-hidden="true">↓</span></a></div>
+        <nav class="lesson-pagination" aria-label="이전 다음 강의"><button id="previous" type="button"><span>← 이전 강의</span><strong id="previous-title"></strong></button><button id="next" type="button"><span>다음 강의 →</span><strong id="next-title"></strong></button></nav>
+      </section>
+
+      <aside id="curriculum" class="curriculum" aria-labelledby="curriculum-title" tabindex="-1">
+        <div class="curriculum-heading"><div><p class="eyebrow">KB 알쓸 IT 잡</p><h2 id="curriculum-title">전체 강의</h2></div><span class="count-pill">9개</span></div>
+        <ol id="lessons" class="lessons"></ol>
+        <div class="playlist-footer"><span class="info-icon" aria-hidden="true">i</span><p>현재는 3강을 재생할 수 있어요.<br>나머지 8개 강의는 영상 준비 중입니다.</p></div>
+        <div id="progress-summary" class="progress-summary"><div><span>내 시청 기록</span><strong id="progress-label">아직 시청 전</strong></div><progress id="progress" value="0" max="100" aria-label="3강 시청 진행률"></progress><p>이 브라우저에서 본 위치를 기억해요.</p></div>
+      </aside>
+    </div>
+    <footer class="site-footer"><span>스터디언 · 알쓸 IT 잡</span><span>전체 9강 · 3강 공개 / 8개 강의 준비 중</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p>강의 목록과 목차를 이용하려면 브라우저에서 JavaScript를 켜주세요. <a href="assets/lesson-03.mp4">3강 영상 직접 보기</a></p></noscript>
+</body>
+</html>
